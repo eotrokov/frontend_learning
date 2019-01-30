@@ -49,3 +49,12 @@ footer {
     word-wrap: none;
     align-items: center;
 }
+.images{
+    background: red;
+}
+.images::before {
+    content: "♥";
+    height: 100px;
+    width: 100px;
+    background: green;
+  }
