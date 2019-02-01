@@ -1,5 +1,8 @@
 body {
-   background: transparent
+   background: transparent;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }
 header {
     display: flex;
@@ -11,6 +14,7 @@ header {
     word-wrap: none;
     width: 239px;
     height: 56px;
+    text-align: center;
 }
 .header-logo {
     width: 244px;
@@ -18,17 +22,18 @@ header {
     display: flex;
     justify-content: center;
 }
-.header-item> span {
+.header-item> span {   
+    text-align: center;
     height: 11px;
-  font-family: PTSans;
-  font-size: 14px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.86;
-  letter-spacing: normal;
-  text-align: center;
-  color:#000000;
+    font-family: PTSans;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.86;
+    letter-spacing: normal;
+    text-align: center;
+    color:#000000;
 }
 .header-item.img {
     display: flex;
@@ -38,6 +43,25 @@ header {
     height: 96px;
     background: red
 }
+.content{
+    display: flex;
+}
+.content__intro {
+    display: flex;
+  
+}
+.content__intro-back {
+    width: 1200px;
+    height: 518px;
+}
+.content__intro::after{
+    content: "";
+    background-image: url(../images/text-index.svg);
+    width: 1200px;
+    height: 518px;
+    display: flex;
+}
+
 footer {
     display: flex;
     justify-content: space-around;
@@ -49,12 +73,17 @@ footer {
     word-wrap: none;
     align-items: center;
 }
-.images{
-    background: red;
+.footer-item > div {
+    width: 46px;
+    height: 48px;
+    background-color: #81b3d2;
+    display: flex;
+    justify-content: center;
+    margin-right: 6px;
 }
-.images::before {
-    content: "♥";
-    height: 100px;
-    width: 100px;
-    background: green;
-  }
+.footer-item > span {
+    margin-right: 11px;
+}
+.footer-item> div:last-child {
+    margin-right: 0px;
+}
