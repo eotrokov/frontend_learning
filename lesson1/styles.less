@@ -15,11 +15,35 @@ body {
   span {
       text-transform: uppercase;
   }
- .header-item {
-     text-transform: uppercase;
-     word-wrap: none;
-     text-align: center;
- }
+.header {
+    &-item {
+        text-transform: uppercase;
+        word-wrap: none;
+        text-align: center;
+    }
+    &-logo {
+        display: flex;
+        justify-content: center;
+        & > img {
+            display: flex;
+            position: absolute;
+            z-index: 2;
+        }
+    }
+    & > span {   
+        text-align: center;
+        height: 11px;
+        font-family: PTSans;
+        font-size: 14px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.86;
+        letter-spacing: normal;
+        text-align: center;
+        color:#000000;
+   }
+}
  .column_1 {
      grid-column: 1;
  }
@@ -33,29 +57,7 @@ body {
      grid-column: 4;
  }
  .column_5 {
-     grid-column: 5;
-}
-.header-logo {
-     display: flex;
-     justify-content: center;
- }
- .header-logo > img {
-     display: flex;
-     position: absolute;
-     z-index: 2;
- }
- .header-item> span {   
-     text-align: center;
-     height: 11px;
-     font-family: PTSans;
-     font-size: 14px;
-     font-weight: bold;
-     font-style: normal;
-     font-stretch: normal;
-     line-height: 1.86;
-     letter-spacing: normal;
-     text-align: center;
-     color:#000000;
+    grid-column: 5;
 }
 .content{
     display: flex;
@@ -319,28 +321,28 @@ body {
    left: 50%;
    transform: translate(-50%, -50%);
  }
- footer {
+.footer {
      display: flex;
      justify-content: space-around;
      width: 1200px;
- }
- .footer-item { 
-     display: flex;
-     text-transform: uppercase;
-     word-wrap: none;
-     align-items: center;
-     &> div {
-        width: 46px;
-        height: 48px;
-        background-color: #81b3d2;
+     &-item{
         display: flex;
-        justify-content: center;
-        margin-right: 6px;
-        &:last-child {
-            margin-right: 0px;
+        text-transform: uppercase;
+        word-wrap: none;
+        align-items: center;
+        &> div {
+           width: 46px;
+           height: 48px;
+           background-color: #81b3d2;
+           display: flex;
+           justify-content: center;
+           margin-right: 6px;
+           &:last-child {
+               margin-right: 0px;
+           }
         }
-     }
-     &> span{
-         margin-right: 11px;
-     }
-  }
+        &> span {
+            margin-right: 11px;
+        }
+    }
+}
