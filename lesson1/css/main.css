@@ -5,9 +5,12 @@ body {
    align-items: center;
 }
 header {
-    display: flex;
     justify-content: space-around;
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
+    display:grid;
+    grid-template-columns: minmax(100px, 20%) minmax(100px, 20%) minmax(100px, 20%) minmax(100px, 20%) minmax(100px, 20%);
+    grid-template-rows: 56px;
  }
  span{
      text-transform: uppercase;
@@ -15,13 +18,24 @@ header {
 .header-item {
     text-transform: uppercase;
     word-wrap: none;
-    width: 239px;
-    height: 56px;
     text-align: center;
 }
+.column_1 {
+    grid-column: 1;
+}
+.column_2 {
+    grid-column: 2;
+}
+.column_3 {
+    grid-column: 3;
+}
+.column_4 {
+    grid-column: 4;
+}
+.column_5 {
+    grid-column: 5;
+}
 .header-logo {
-    width: 244px;
-    height: 56px;
     display: flex;
     justify-content: center;
 }
@@ -53,9 +67,9 @@ header {
     text-align: center;
 }
 .content__intro-back {
-    width: 1200px;
-    height: 518px;
-   }
+    width: 100%;
+    height: auto;
+}
 .content__intro-text {
     position: absolute;
   top: 50%;
