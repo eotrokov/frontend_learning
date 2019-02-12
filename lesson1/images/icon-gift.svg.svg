@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 75" width="64" height="75">
+	<defs>
+		<image width="64" height="75" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABLCAMAAAD3cHEvAAAAAXNSR0IB2cksfwAAADNQTFRFAAAAgbPRgbPRgbPRgbPRgbPRgbPRgbPRgbPRgbPRgbPRgbPRgbPRgbPRgbPRgbPRgbPR9qU3FwAAABF0Uk5TAGCv/0Awz4/vnxDfUHCAIL8wP6wuAAABk0lEQVR4nO2V646EIAyFRZC74vs/7bagBSPgjrs/NhtOMokO9OMUWpymq9jMQbOY3mmR/JB6F685ydxGhbDfiXfKe6VvHkRMza1dgIMpW0b5YkidxuTSjmcwzgozLjs2OTXdJoDJmV48uQGt6B7YHvOQTYC+uIa5+rAQsh102dwHGCuOP2QLmMBp3HQsyMJ0muoIRYe6wUsLYLJplDgPAmPCDVsRrjQX7/JY2BUGRLXETqnrKO49OFqKksDT1aEajLLYCTNlEVJdQAa6iKdSaRIcVYqMKUlKDDejfYiZQGcRd9yei4adP6wfCalnUj3E7H06AxuX1/4hHsRiS+8RAY9G4bnZLf3b3r+biYjAcoak9hSu++kXEulekozxQubpOrnk4VLr5vD901ty1eXqvXBrLlM/k4a89vfh0dv0s3ioNPitoiZoXENPsjplPQD1Hdqopjd0WpMYgAH4TUBTGdDpBfczgJuWDuEZED8ieHtXGtKUgFo3cvpK8Oo+Pm5iDhuAARiAARiAARiA/wh4qT8B+AKWeyHltCeFbQAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<g id="content">
+		<use id="icon-gift.svg" href="#img1" transform="matrix(1,0,0,1,0,0)"/>
+	</g>
+</svg>

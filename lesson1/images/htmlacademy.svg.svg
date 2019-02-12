@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 34" width="27" height="34">
+	<defs>
+		<image width="27" height="34" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAiCAMAAACZf1ICAAAAAXNSR0IB2cksfwAAADNQTFRFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAowVGyQAAABF0Uk5TABBAcICfv//f749gIFAwz69V88LJAAABMklEQVR4nHWT67aEIAiFFRFEa/T9n/YgXmqaDj+y1Qe4ueSccx4gYCTibkQRA4DX744Sv1siZ6cQZSwADqBgJhL7qgwO92sHGHsh3R6spPMf9ulC6XhhPjLjkfXhnyzICNFgKV8MKu+rzsT02czS+UsFCkc/GMpWsI7IEoxd6RzFSfUSY3SlQxacr3XE2dWDBeIEPS6NOFWSZyhxDIkbNI0fOjX5rOlUEaj1b529kTISEwWbMN1qbyGbr/rUH8ZUtFnB5zHzOwOtPwfZ+3BnVEtXgW/sFG6lcp17Zar3jPQiwZV0VGvMr6mnM11d8sZSmdsiK52tjjJVuF3zal5fnd71o/HV0OXD3Ma0etNXrpnbhrG3gCvsqe4hri2whno7nz+B+ccr/tusdAkvxNlqx7veP492DpGe8BpeAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<g id="footer">
+		<use id="htmlacademy.svg" href="#img1" transform="matrix(1,0,0,1,0,0)"/>
+	</g>
+</svg>
