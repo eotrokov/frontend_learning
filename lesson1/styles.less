@@ -6,55 +6,85 @@
 @back: #81b3d2;
 @white: #ffffff;
 @lightGray : #eeeeee;
-@headerColWidht: minmax(100px, 20%);
-body {
+a {
+    text-transform: uppercase;
+    color: @black;
+    &:hover {
+        color: @gray;
+    }
+}
+
+span,
+h2,
+h3 {
+    font-family: 'PT Sans';
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 21px;
+}
+
+h3 {
+    font-size: 14px;
+}
+
+.ul {
+    list-style-type: none;
+    width: 100%;
+    padding-inline-start: 0px;
+}
+
+.li {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-top: 60px;
+}
+
+.body {
     background: transparent;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-header {
+.header {
     justify-content: space-around;
     width: 100%;
     max-width: @width;
     display: flex;
+    height: 56px;
 }
 
-nav {
-    width: @width/5;
-    height: 56px;
+.nav {
     display: flex;
-    justify-content: center;
+    width: 100%;
+    justify-content: space-around;
 }
 
 .header-link {
+    width: @width/5;
     font-family: 'PT Sans';
     text-decoration: none;
-    display: inline-flex;
     justify-content: center;
     font-size: 14px;
     font-weight: bold;
     line-height: 1.86;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 .header-logo {
-    img {
-        position: absolute;
+    &::after {
+        content: url(./images/logotype-desktop.svg.svg);
         z-index: 1;
-        transform: translate(-50%, 0%);
     }
-}
-
-a:link,
-a:visited,
-a:hover,
-a:active {
-    color: @black;
-}
-
-span {
-    font-family: 'PT Sans';
+    display: flex;
+    justify-content: center;
+    width: @width/5;
 }
 
 .intro {
@@ -89,18 +119,16 @@ span {
         display: flex;
         flex-direction: column;
         margin-bottom: 50px;
-        &>span {
+        &>h1 {
             text-align: center;
-            font-size: 21px;
             font-weight: bold;
             line-height: 1.24;
             color: @black;
-            &:last-child {
-                margin-top: 40px;
-                font-size: 14px;
-                font-weight: normal;
-                color: @gray;
-            }
+        }
+        &>h2 {
+            margin-top: 40px;
+            font-weight: normal;
+            color: @gray;
         }
     }
 }
@@ -108,20 +136,6 @@ span {
 .content-items {
     display: flex;
     flex-direction: column;
-}
-
-ul {
-    list-style-type: none;
-    width: 100%;
-    padding-inline-start: 0px;
-}
-
-li {
-    float: left;
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    margin-top: 60px;
 }
 
 .info {
@@ -147,7 +161,6 @@ li {
 }
 
 .info-title {
-    font-size: 21px;
     font-weight: bold;
     line-height: 1.24;
     text-align: center;
@@ -175,7 +188,6 @@ li {
     justify-content: center;
     &-title {
         margin-top: 32px;
-        font-size: 21px;
         font-weight: bold;
         line-height: 1.24;
         color: @black;
@@ -184,8 +196,7 @@ li {
     }
     &-content {
         margin-top: 20px;
-        height: 81px;
-        font-size: 14px;
+        height: 80px;
         line-height: 1.5;
         text-align: center;
         color: @gray;
@@ -206,7 +217,6 @@ li {
         &__content {
             width: 434px;
             height: 98px;
-            font-size: 14px;
             line-height: 1.71;
             text-align: center;
             color: @gray;
@@ -214,13 +224,14 @@ li {
     }
 }
 
-button {
+.button {
     width: 458px;
     height: 58px;
     background-color: @back;
     position: relative;
     border: none;
     font-size: 21px;
+    text-transform: uppercase;
     line-height: 1.24;
     text-align: center;
     color: @white;
@@ -242,9 +253,10 @@ button {
     }
 }
 
-footer {
+.footer {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     width: @width;
     margin-top: 20px;
 }
@@ -287,8 +299,12 @@ footer {
 }
 
 .logo {
+    position: relative;
     &::after {
-        margin-left: 5px;
+        position: absolute;
+        top: 60%;
+        left: 80%;
+        transform: translate(-50%, -50%);
         content: url(./images/htmlacademy.svg.svg);
     }
 }
