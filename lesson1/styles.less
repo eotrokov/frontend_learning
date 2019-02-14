@@ -6,7 +6,6 @@
 @back: #81b3d2;
 @white: #ffffff;
 @lightGray : #eeeeee;
-
 a {
     text-transform: uppercase;
     color: @black;
@@ -25,10 +24,15 @@ figcaption {
 
 h2 {
     font-size: 21px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
 }
 
-p,figcaption {
+p,
+figcaption {
     font-size: 14px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
 }
 
 .items {
@@ -36,7 +40,8 @@ p,figcaption {
     width: 100%;
     margin: 0px;
     padding-inline-start: 0px;
-    &-item{
+    height: 330px;
+    &-item {
         float: left;
         display: flex;
         flex-direction: column;
@@ -50,6 +55,10 @@ p,figcaption {
             color: @black;
         }
     }
+}
+
+body {
+    margin: 0px;
 }
 
 .body {
@@ -74,7 +83,7 @@ p,figcaption {
 }
 
 .header-link {
-    width: @width/5;
+    flex: 1;
     font-family: 'PT Sans';
     text-decoration: none;
     justify-content: center;
@@ -107,7 +116,7 @@ p,figcaption {
     }
     &-text {
         position: absolute;
-        top: 50%;
+        top: 49%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
@@ -128,7 +137,7 @@ p,figcaption {
     &-title {
         display: flex;
         flex-direction: column;
-        margin-bottom: 50px;
+        margin-bottom: 52px;
         &>h2 {
             text-align: center;
             font-weight: bold;
@@ -136,7 +145,7 @@ p,figcaption {
             color: @black;
         }
         &>p {
-            margin-top: 40px;
+            margin-top: 32px;
             font-weight: normal;
             color: @gray;
         }
@@ -153,7 +162,7 @@ p,figcaption {
     width: 100%;
     flex-direction: row;
     height: @rowHeight;
-    float: left;    
+    float: left;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     margin-block-start: 0em;
@@ -164,7 +173,6 @@ p,figcaption {
     background-color: @back;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     width: 400px;
     color: @white;
     &-light {
@@ -178,6 +186,7 @@ p,figcaption {
     font-weight: bold;
     line-height: 1.24;
     text-align: center;
+    margin-top: 55px;
     &-light {
         &:extend(.info-title);
         color: @black;
@@ -188,6 +197,7 @@ p,figcaption {
     text-align: center;
     font-size: 14px;
     line-height: 1.5;
+    margin-top: 9px;
     &-light {
         &:extend(.info-title-mini);
         color: @gray;
@@ -256,13 +266,13 @@ p,figcaption {
 }
 
 .map {
-   &-container {
-    margin-top: 20px;
-    margin-bottom: 40px;
-    display: flex;
-    position: relative;
-    text-align: center;
-   }
+    &-container {
+        margin-top: 20px;
+        margin-bottom: 40px;
+        display: flex;
+        position: relative;
+        text-align: center;
+    }
     &-location {
         position: absolute;
         top: 50%;
@@ -318,7 +328,6 @@ p,figcaption {
 
 .logo {
     position: relative;
-
     &::after {
         position: absolute;
         top: 60%;
