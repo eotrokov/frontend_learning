@@ -6,6 +6,7 @@
 @back: #81b3d2;
 @white: #ffffff;
 @lightGray : #eeeeee;
+
 a {
     text-transform: uppercase;
     color: @black;
@@ -16,7 +17,8 @@ a {
 
 span,
 h2,
-h3 {
+p,
+figcaption {
     font-family: 'PT Sans';
     text-transform: uppercase;
 }
@@ -25,22 +27,29 @@ h2 {
     font-size: 21px;
 }
 
-h3 {
+p,figcaption {
     font-size: 14px;
 }
 
-.ul {
+.items {
     list-style-type: none;
     width: 100%;
+    margin: 0px;
     padding-inline-start: 0px;
-}
-
-.li {
-    float: left;
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    margin-top: 60px;
+    &-item{
+        float: left;
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        margin-top: 60px;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        &-light {
+            &:extend(.items-item);
+            background-color: @lightGray;
+            color: @black;
+        }
+    }
 }
 
 .body {
@@ -78,13 +87,14 @@ h3 {
 }
 
 .header-logo {
-    &::after {
+    width: @width/5;
+    &::before {
         content: url(./images/logotype-desktop.svg.svg);
         z-index: 1;
+        position: relative;
+        display: flex;
+        justify-content: center;
     }
-    display: flex;
-    justify-content: center;
-    width: @width/5;
 }
 
 .intro {
@@ -119,13 +129,13 @@ h3 {
         display: flex;
         flex-direction: column;
         margin-bottom: 50px;
-        &>h1 {
+        &>h2 {
             text-align: center;
             font-weight: bold;
             line-height: 1.24;
             color: @black;
         }
-        &>h2 {
+        &>p {
             margin-top: 40px;
             font-weight: normal;
             color: @gray;
@@ -143,7 +153,11 @@ h3 {
     width: 100%;
     flex-direction: row;
     height: @rowHeight;
-    float: left;
+    float: left;    
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
 }
 
 .info-item {
@@ -242,9 +256,13 @@ h3 {
 }
 
 .map {
+   &-container {
+    margin-top: 20px;
+    margin-bottom: 40px;
     display: flex;
     position: relative;
     text-align: center;
+   }
     &-location {
         position: absolute;
         top: 50%;
@@ -300,6 +318,7 @@ h3 {
 
 .logo {
     position: relative;
+
     &::after {
         position: absolute;
         top: 60%;
