@@ -17,9 +17,16 @@ a {
 span,
 h2,
 p,
-figcaption {
-    font-family: 'PT Sans';
+figcaption,
+h1 {
+    font-family: 'PT Sans', Times, serif;
     text-transform: uppercase;
+}
+
+h1 {
+    font-size: 30px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
 }
 
 h2 {
@@ -33,6 +40,12 @@ figcaption {
     font-size: 14px;
     margin-block-start: 0px;
     margin-block-end: 0px;
+}
+
+figcaption {
+    &>.info-title-mini {
+        margin-top: 10px;
+    }
 }
 
 .items {
@@ -80,6 +93,19 @@ body {
     display: flex;
     width: 100%;
     justify-content: space-around;
+}
+
+.footer-link {
+    font-family: 'PT Sans';
+    text-decoration: none;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.86;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex: 0;
 }
 
 .header-link {
@@ -138,10 +164,11 @@ body {
         display: flex;
         flex-direction: column;
         margin-bottom: 52px;
-        &>h2 {
+        &>h1 {
             text-align: center;
             font-weight: bold;
             line-height: 1.24;
+            font-size: 21px;
             color: @black;
         }
         &>p {
@@ -167,6 +194,9 @@ body {
     margin-inline-end: 0px;
     margin-block-start: 0em;
     margin-block-end: 0em;
+    &>img {
+        transform: scale(1, 1.57);
+    }
 }
 
 .info-item {
@@ -186,7 +216,7 @@ body {
     font-weight: bold;
     line-height: 1.24;
     text-align: center;
-    margin-top: 55px;
+    margin-top: 52px;
     &-light {
         &:extend(.info-title);
         color: @black;
@@ -196,8 +226,8 @@ body {
 .info-title-mini {
     text-align: center;
     font-size: 14px;
-    line-height: 1.5;
-    margin-top: 9px;
+    margin-top: 27px;
+    line-height: 1.5; // margin-top: 9px;
     &-light {
         &:extend(.info-title-mini);
         color: @gray;
@@ -229,8 +259,7 @@ body {
 
 .feedback {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    flex-direction: column; //justify-content: space-evenly;
     align-items: center;
     height: 290px;
     &-title {
@@ -249,6 +278,8 @@ body {
 }
 
 .button {
+    padding: 0px;
+    margin-top: 52px;
     width: 458px;
     height: 58px;
     background-color: @back;
@@ -267,8 +298,8 @@ body {
 
 .map {
     &-container {
-        margin-top: 20px;
-        margin-bottom: 40px;
+        margin-top: 42px;
+        margin-bottom: 36px;
         display: flex;
         position: relative;
         text-align: center;
@@ -285,8 +316,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: @width;
-    margin-top: 20px;
+    width: @width; // margin-top: 20px;
 }
 
 .socials {
@@ -300,21 +330,23 @@ body {
     height: 48px;
     display: block;
     &::after {
-        content: '';
-        display: inline-block;
-        margin: 35%;
+        margin-left: 16px;
+        margin-top: 16px;
+        display: flex;
     }
 }
 
+.social+.social {
+    margin-left: 5px;
+}
+
 .twitter {
-    margin-right: 5px;
     &::after {
         content: url(./images/icon-twitter.svg.svg);
     }
 }
 
 .facebook {
-    margin-right: 5px;
     &::after {
         content: url(./images/icon-facebook.svg.svg);
     }
@@ -331,7 +363,7 @@ body {
     &::after {
         position: absolute;
         top: 60%;
-        left: 80%;
+        left: 120%;
         transform: translate(-50%, -50%);
         content: url(./images/htmlacademy.svg.svg);
     }
