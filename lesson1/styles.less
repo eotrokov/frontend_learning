@@ -46,6 +46,9 @@ figcaption {
     &>.info-title-mini {
         margin-top: 10px;
     }
+    &>.info-title-mini+.info-title-mini {
+        margin-top: 20px;
+    }
 }
 
 .items {
@@ -234,6 +237,14 @@ body {
     }
 }
 
+.info-title-mini-light {
+    margin-top: 10px;
+}
+
+.info-title-mini-light+.info-title-mini-light {
+    margin-top: 20px;
+}
+
 .image {
     display: flex;
     flex-direction: column;
@@ -314,14 +325,15 @@ body {
 
 .footer {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
     width: @width; // margin-top: 20px;
 }
 
 .socials {
     display: flex;
     flex-direction: row;
+    flex: .2;
 }
 
 .social {
