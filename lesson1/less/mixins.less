@@ -1,0 +1,30 @@
+.page-footer-items() {
+    margin-bottom: 30px;
+    @media @tablet-widths {
+        width: 33%;
+        margin-bottom: 0;
+    }
+}
+
+.title(@fsz: @font-size-bigger1, @lh: @base-line-height, @clr: @dark-color, @ttr: uppercase) {
+    font-size: @fsz;
+    font-weight: bold;
+    line-height: @lh;
+    color: @clr;
+    text-transform: @ttr;
+}
+
+.container-inner() {
+    margin: 0 20px;
+    @media @tablet-widths {
+        margin: 0 60px;
+    }
+    @media @desktop-widths {
+        margin: 0 120px;
+    }
+}
+
+.reset-spaces() {
+    margin: 0;
+    padding: 0;
+}
