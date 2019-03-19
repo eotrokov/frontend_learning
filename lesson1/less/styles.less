@@ -1,52 +1,5 @@
-@import "./colors";
-@import "./header";
-@import "./body";
-@import "./footer";
-a {
-    text-transform: uppercase;
-    color: @black;
-    &:hover {
-        color: @gray;
-    }
-}
-
-span,
-h2,
-p,
-figcaption,
-h1 {
-    font-family: 'PT Sans', Times, serif;
-    text-transform: uppercase;
-}
-
-h1 {
-    font-size: 30px;
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-}
-
-h2 {
-    font-size: 21px;
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-}
-
-p,
-figcaption {
-    font-size: 14px;
-    margin-block-start: 0px;
-    margin-block-end: 0px;
-}
-
-figcaption {
-    &>.info-title-mini {
-        margin-top: 10px;
-    }
-    &>.info-title-mini+.info-title-mini {
-        margin-top: 20px;
-    }
-}
-
-body {
-    margin: 0px;
-}
+@import "normalize";
+@import "variab";
+@import "header";
+@import "body";
+@import "footer";

@@ -2,16 +2,14 @@
   "name": "lesson1",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \\\"Error: no test specified\\\" && exit 1",
     "start": "parcel index.html -p 8080"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/eotrokov/frontend_learning.git"
   },
-  "author": "",
+  "author": "eotrokov",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/eotrokov/frontend_learning/issues"
