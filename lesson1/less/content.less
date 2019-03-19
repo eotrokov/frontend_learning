@@ -1,0 +1,110 @@
+.content {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    &-title {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 52px;
+        &>h1 {
+            text-align: center;
+            font-weight: bold;
+            line-height: 1.24;
+            font-size: 21px;
+            color: @black;
+        }
+        &>p {
+            margin-top: 32px;
+            font-weight: normal;
+            color: @gray;
+        }
+    }
+}
+
+.content-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.info {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    height: @rowHeight;
+    float: left;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    &>img {
+        transform: scale(1, 1.57);
+    }
+}
+
+.info-item {
+    background-color: @back;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    color: @white;
+    &-light {
+        &:extend(.info-item);
+        background-color: @lightGray;
+        color: @black;
+    }
+}
+
+.info-title {
+    font-weight: bold;
+    line-height: 1.24;
+    text-align: center;
+    margin-top: 52px;
+    &-light {
+        &:extend(.info-title);
+        color: @black;
+    }
+}
+
+.info-title-mini {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 27px;
+    line-height: 1.5; // margin-top: 9px;
+    &-light {
+        &:extend(.info-title-mini);
+        color: @gray;
+    }
+}
+
+.info-title-mini-light {
+    margin-top: 10px;
+}
+
+.info-title-mini-light+.info-title-mini-light {
+    margin-top: 20px;
+}
+
+.image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 330px;
+    justify-content: center;
+    &-title {
+        margin-top: 32px;
+        font-weight: bold;
+        line-height: 1.24;
+        color: @black;
+        display: flex;
+        justify-content: center;
+    }
+    &-content {
+        margin-top: 20px;
+        height: 80px;
+        line-height: 1.5;
+        text-align: center;
+        color: @gray;
+    }
+}

@@ -1,0 +1,33 @@
+@import "./intro";
+@import "./content";
+@import "./button";
+@import "./map";
+@import "./feedback";
+.body {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.items {
+    list-style-type: none;
+    width: 100%;
+    margin: 0px;
+    padding-inline-start: 0px;
+    height: 330px;
+    &-item {
+        float: left;
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        margin-top: 60px;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        &-light {
+            &:extend(.items-item);
+            background-color: @lightGray;
+            color: @black;
+        }
+    }
+}

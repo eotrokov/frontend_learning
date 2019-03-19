@@ -1,0 +1,57 @@
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: @width; // margin-top: 20px;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    flex: .2;
+}
+
+.social {
+    background-color: @back;
+    width: 48px;
+    height: 48px;
+    display: block;
+    &::after {
+        margin-left: 16px;
+        margin-top: 16px;
+        display: flex;
+    }
+}
+
+.social+.social {
+    margin-left: 5px;
+}
+
+.twitter {
+    &::after {
+        content: url(../images/icon-twitter.svg.svg);
+    }
+}
+
+.facebook {
+    &::after {
+        content: url(../images/icon-facebook.svg.svg);
+    }
+}
+
+.youtube {
+    &::after {
+        content: url(../images/icon-youtube.svg.svg);
+    }
+}
+
+.logo {
+    position: relative;
+    &::after {
+        position: absolute;
+        top: 60%;
+        left: 120%;
+        transform: translate(-50%, -50%);
+        content: url(../images/htmlacademy.svg.svg);
+    }
+}
