@@ -1,15 +1,18 @@
 .map {
-    &-container {
-        margin-top: 42px;
-        margin-bottom: 36px;
-        display: flex;
-        position: relative;
-        text-align: center;
-    }
-    &-location {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
+  .reset-spaces();
+  width: 100%;
+  min-height: 350px;
+  line-height: 0;
+  background-repeat: no-repeat;
+  background-position: 50% top;
+  background-size: auto 350px;
+  background-color: #cbe0a3;
+  background-image: url("../images/bg-map-desktop.jpg");
+  &__source {
+    .reset-spaces();
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 350px;
+  }
 }

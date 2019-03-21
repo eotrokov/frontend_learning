@@ -1,18 +1,16 @@
 .button {
-    padding: 0px;
-    margin-top: 52px;
-    width: 458px;
-    height: 58px;
-    background-color: @back;
-    position: relative;
-    border: none;
-    font-size: 21px;
-    text-transform: uppercase;
-    line-height: 1.24;
-    text-align: center;
-    color: @white;
-    text-align: center;
-    text-decoration: none;
-    overflow: hidden;
-    cursor: pointer;
+  .reset-spaces();
+  .title(@font-size-bigger2, @light-color);
+  .btn-colors();
+  display: block;
+  height: 58px;
+  line-height: 58px;
+  outline: none;
+  border: none;
+  margin: 30px auto;
+  margin-bottom: 0;
+  width: 100%;
+  @media @tablet-widths {
+    width: 50%;
+  }
 }

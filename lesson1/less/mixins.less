@@ -132,3 +132,26 @@
     }
   }
 }
+
+.flex-switch() {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  @media @tablet-widths {
+    flex-direction: row;
+  }
+}
+
+.flex-switch-desktop() {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  @media @desktop-widths {
+    flex-direction: row;
+  }
+}
+
+.set-colors(@clr: @base-text-color, @bgclr: @light-color) {
+  color: @clr;
+  background-color: @bgclr;
+}
