@@ -1,21 +1,89 @@
 .intro {
-    display: flex;
+  .reset-spaces();
+  min-height: 158px;
+  background-repeat: no-repeat;
+  background-position: 50% bottom;
+  background-size: auto, auto;
+  background-image: url("../images/bg-intro-triangle-desktop.svg"),
+    url("../images/bg-back-mobile.jpg");
+  @media @tablet-widths {
+    min-height: 290px;
+    background-size: auto, 1200px 518px;
+    background-image: url("../images/bg-intro-triangle-desktop.svg"),
+      url("../images/bg-back-desktop.jpg");
+  }
+  @media (min-resolution: 2dppx) {
+    @media @mobile-widths {
+      background-size: auto, 768px 389px;
+      background-image: url("../images/bg-intro-triangle-desktop.svg"),
+        url("../images/bg-back-mobile@2x.jpg");
+    }
+    @media @tablet-widths {
+      background-size: auto, 1200px 518px;
+      background-image: url("../images/bg-intro-triangle-desktop.svg"),
+        url("../images/bg-back-desktop@2x.jpg");
+    }
+  }
+  &--first-page {
+    min-height: 389px; // padding-top: 90px;
+    @media @tablet-widths {
+      min-height: 518px; //   padding-top: 78px;
+    }
+    @media @desktop-widths {
+      min-height: 518px;
+    }
+  }
+  &__banner {
+    padding-top: 52px;
+    width: 230px;
+    @media @tablet-widths {
+      width: 460px;
+      padding-top: 78px;
+    }
+    @media @desktop-widths {
+      padding-top: 78px;
+    }
+  }
+  &--first-page &__banner {
+    width: 280px;
+    @media @tablet-widths {
+      width: 460px;
+    }
+  }
+}
+
+.common-section {
+  .reset-spaces();
+  padding: 40px 6%;
+  @media @tablet-widths {
+    padding: 50px 12%;
+  }
+  &--divided {
     position: relative;
-    text-align: center;
-    &-back {
-        width: 100%;
-        height: auto;
+    .divider();
+    .section-bottom-adaptive();
+  }
+  &--triangle {
+    .section-bottom-adaptive();
+  } /////*** TITLE ***/////
+  &__title {
+    .title();
+    margin-bottom: 25px;
+    @media @tablet-widths {
+      .title(@fsz: @font-size-bigger2);
+      margin-bottom: 35px;
     }
-    &-text {
-        position: absolute;
-        top: 49%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+  }
+  &__title--bigger {
+    .title();
+    @media @tablet-widths {
+      .title(@fsz: @font-size-bigger3);
     }
-    &-bottom {
-        position: absolute;
-        bottom: 0%;
-        left: 50%;
-        transform: translate(-50%, 0%);
+  }
+  &__title--biggest {
+    .title(@font-size-bigger2);
+    @media @tablet-widths {
+      .title(@fsz: @font-size-bigger3);
     }
+  }
 }
